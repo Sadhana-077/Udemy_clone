@@ -1,0 +1,34 @@
+{
+  "name.sol": {
+    "__sources__": {
+      "name.sol": {
+        "content": "//SPDX-License-Identifier:MIT\r\npragma solidity^0.8.0;\r\n\r\ncontract nameage {\r\n    string public name;\r\n    uint public age;\r\n\r\n    function alter(uint _age)public {\r\n        age = _age;\r\n    }\r\n\r\n    function getname()public view returns(string memory){\r\n        return name;\r\n    }\r\n\r\n}\r\n\r\n",
+        "file": "name.sol"
+      }
+    }
+  },
+  "age.sol": {
+    "__sources__": {
+      "age.sol": {
+        "content": "\r\n\r\n// SPDX-License-Identifier: MIT\r\npragma solidity 0.8.0;\r\n\r\ncontract practice {\r\n    string public name=\"Sadhana\";\r\n    uint public age=20;\r\n    function update(uint _age) public {\r\n        age=_age;\r\n    }\r\n    function getname()public view returns(string memory){\r\n        return name;\r\n    }\r\n\r\n\r\n}",
+        "file": "age.sol"
+      }
+    }
+  },
+  "add.sol": {
+    "__sources__": {
+      "add.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity^0.8.0;\r\n\r\n\r\ncontract math{\r\n\r\n    \r\n    function add(uint a , uint b)public pure returns(uint){\r\n        \r\n        uint sum= a+b;\r\n        return sum;\r\n\r\n    }\r\n\r\n    function oddoreven(uint x)public pure returns(string memory){\r\n        require(x%2==0,\"Odd\");\r\n        return \"Even\";\r\n    }\r\n\r\n    function accepteth() payable public {\r\n\r\n    }\r\n\r\n    function bal() public view returns(uint){\r\n        return address(this).balance;\r\n    }\r\n\r\n    function allow(uint x )public pure returns(string memory){\r\n        require(x > 18,\"Not allowed\");\r\n        return \"Allowed\";\r\n    }\r\n\r\n    event UserRegistered(address user);\r\n    function register()public{\r\n        emit UserRegistered(msg.sender);\r\n    }\r\n    address public owner;\r\n\r\n    constructor(){\r\n        owner = msg.sender;\r\n\r\n    }\r\n\r\n}",
+        "file": "add.sol"
+      }
+    }
+  },
+  "array/dynamic.sol": {
+    "__sources__": {
+      "array/dynamic.sol": {
+        "content": "//SPDX-License-Identifier: MIT\r\n\r\npragma solidity^0.8.0;\r\n\r\ncontract arrayop{\r\n    uint[] public num;\r\n    function add() public {\r\n        num.push(2);\r\n        num.push(7);\r\n        num.pop();\r\n    }\r\n}",
+        "file": "array/dynamic.sol"
+      }
+    }
+  }
+}
