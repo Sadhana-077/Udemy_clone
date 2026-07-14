@@ -26,8 +26,16 @@
   "array/dynamic.sol": {
     "__sources__": {
       "array/dynamic.sol": {
-        "content": "//SPDX-License-Identifier: MIT\r\n\r\npragma solidity^0.8.0;\r\n\r\ncontract arrayop{\r\n    uint[] public num;\r\n    function add() public {\r\n        num.push(2);\r\n        num.push(7);\r\n        num.pop();\r\n    }\r\n}",
+        "content": "//SPDX-License-Identifier: MIT\r\n\r\npragma solidity^0.8.0;\r\n\r\ncontract arrayop{\r\n    uint[] public num;\r\n    function add() public {\r\n        num.push(2);\r\n        num.push(7);\r\n        num.pop();\r\n    }\r\n\r\n    function getnum(uint _index)public view returns(uint){\r\n        return num[_index];\r\n    }\r\n\r\n    mapping(address => uint)public balance;\r\n\r\n    function setbal(uint amount) public {\r\n\r\n        balance[msg.sender] = amount;\r\n\r\n    }\r\n\r\n    function getbal() public view returns(uint){\r\n        return balance[msg.sender];\r\n    }\r\n\r\n    struct Student {\r\n        string name;\r\n        uint age;\r\n        uint marks;\r\n    }\r\n\r\n    mapping(address => Student) public Students;\r\n    function set(string memory name, uint age , uint marks) public {\r\n        Students[msg.sender]=Student(name,age,marks);\r\n    }\r\n\r\n    function get() public view returns(Student memory) {\r\n        return Students[msg.sender];\r\n    }\r\n    function update(uint _mark) public {\r\n        Students[msg.sender].marks = _mark;\r\n    }\r\n\r\n}",
         "file": "array/dynamic.sol"
+      }
+    }
+  },
+  "level3/onlyonwer.sol": {
+    "__sources__": {
+      "level3/onlyonwer.sol": {
+        "content": "//SPDX-License-Identifier: MIT\r\n\r\npragma solidity^0.8.0;\r\n\r\ncontract modifierr{\r\n\r\n    address public owner;\r\n    modifier onlyOwner(){\r\n        require(msg.sender == owner, \"Not Allowed\");\r\n        _;\r\n    }\r\n\r\n}",
+        "file": "level3/onlyonwer.sol"
       }
     }
   }
