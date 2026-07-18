@@ -38,12 +38,13 @@ Udemy-Clone/
 
 ## 📸 Screenshot
 
+![Home Page](images/screenshot1.png)
 
+![Recommended Courses](images/screenshot2.png)
 
-![Udemy Clone Screenshot](images/screenshot 1.png)
-![Udemy Clone Screenshot](images/screenshot 2.png)
-![Udemy Clone Screenshot](images/screenshot 3.png)
-![Udemy Clone Screenshot](images/screenshot 4.png)
+![Popular Courses](images/screenshot3.png)
+
+![Footer](images/screenshot4.png)
 
 ```
 images/screenshot.png
